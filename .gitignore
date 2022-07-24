@@ -1,0 +1,19 @@
+.DS_Store
+
+    
+# logs 
+/logs 
+/*.logs
+backend_sanity/logs
+backend_sanity/*.log
+
+#/var/log/apache2/
+node_modules/
+backend_sanity/node_modules/
+
+# Coverage directory used by tools like istanbul
+backend_sanity/coverage
+
+# Compiled sanity studio
+/dist
+backend_sanity/dist
