@@ -8,7 +8,7 @@ import './App.scss';
 export const app = () => {
   return (
     <div className="app">
-      <Navbar />
+      {/* <Navbar /> */}
       <Header />
       <About />
       <Work />
