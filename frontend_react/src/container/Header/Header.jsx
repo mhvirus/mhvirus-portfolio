@@ -17,7 +17,7 @@ const slaceVariants = {
 
 const Header= () => {
   return (
-    <div className="app__header app__flex">
+    <div id="Home" className="app__header app__flex">
       <motion.div
       // for animation that motion library provides
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
