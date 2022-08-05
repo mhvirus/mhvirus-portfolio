@@ -1,8 +1,12 @@
 import React from 'react';
 import './Header.scss';
-import { motion } from 'framer-motion';
-import { images } from '../../constants';
 
+// * Assets
+import { images } from '../../constants';
+// * Libarys
+import { motion } from 'framer-motion';
+// * Commponent
+import { AppWrap } from "../../wrapper"
 
 const slaceVariants = {
   whileInView : {
@@ -17,7 +21,7 @@ const slaceVariants = {
 
 const Header= () => {
   return (
-    <div id="Home" className="app__header app__flex">
+    <div className="app__header app__flex">
       <motion.div
       // for animation that motion library provides
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -47,7 +51,7 @@ const Header= () => {
 
       {/* header image */}
       <motion.div
-      // for animation that motion library provides
+      // ? for animation that motion library provides
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.75, delayChildren: 0.75 }}
 
@@ -57,7 +61,7 @@ const Header= () => {
 
         {/* animated image background */}
         <motion.img
-          // for animation that motion library provides
+          // ? for animation that motion library provides
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
           className="overlay_circle"
@@ -66,7 +70,7 @@ const Header= () => {
         />  
       </motion.div>
 
-      {/* header logo images */}
+      {/*  header logo images */}
       <motion.div
         variants={ slaceVariants }
         whileInView = { slaceVariants.whileInView }
@@ -82,4 +86,4 @@ const Header= () => {
   )
 };
 
-export default Header;
+export default AppWrap(Header, 'Home');

@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import React, { useState, useEffect} from 'react';
 // import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 import { client, urlFor} from '../../client'
 
 import './About.scss';
 
-// * Stactic data for about section
+// * Stactic data for about section example:
 // const about = [
 //   { title : 'Web Development',
 //     description: 'I am a web developer with a passion for building web applications.',
@@ -66,4 +67,4 @@ const About = () => {
   )
 };
 
-export default About;
+export default AppWrap(About, 'about');
