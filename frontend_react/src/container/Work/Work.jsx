@@ -26,7 +26,18 @@ function Work() {
   
 
   const handleWorkFilter = ( item ) =>{
-   
+   setActiveFilter(item);
+   setAnimateCard([ {y: 100, opacity: 0} ]);
+
+   setTimeout(() => {
+    setAnimateCard([ {y: 0, opacity: 1} ]);
+
+    if(item === 'All'){
+      setFillterWork(works);
+    }else{
+      setFillterWork(works.filter(work => work.tags.includes(item)));
+    }
+   }, 500);
   }
 
   return (
@@ -99,7 +110,7 @@ function Work() {
               <div className="app__work-content app__flex">
 
                 {/* Name of Project */}
-                <h2 className="bold-text"> {work.title} </h2>
+                <h4 className="bold-text"> {work.title} </h4>
 
                 {/* Decription of project */}
                 <p className="p-text" style={{ margainTop: 10 }}> {work.description} </p>
